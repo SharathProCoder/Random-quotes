@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random quote generator</title>
+    <link rel="stylesheet" href="design.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading">
+        <h2>Quote of the day</h2>
+      </div>
+      <div class="line"></div>
+      <div class="content design"><blockquote>Loading</blockquote></div>
+      <div class="author design"><span>author</span></div>
+      <div class="btn">
+        <button class="quote" onclick="getData(urlLink)">New Quote</button>
+        <button class="tweet" onclick="tweet();">
+          <img src="/tweet.png" />Tweet
+        </button>
+      </div>
+    </div>
+    <script>
+      let urlLink = "https://api.quotable.io/random";
+      let random = document.querySelector(".content");
+      let author = document.querySelector(".author");
+
+      async function getData(url) {
+        let response = await fetch(url);
+        var data = await response.json();
+        console.log(data);
+        random.innerHTML = data.content;
+        author.innerHTML = data.author;
+      }
+
+      function tweet() {
+        window.open(
+          "https://twitter.com/intent/tweet?text=" + random.innerHTML,
+          "tweet Window",
+          "width=600,height=300"
+        );
+      }
+
+      getData(urlLink);
+      tweet();
+    </script>
+  </body>
+</html>

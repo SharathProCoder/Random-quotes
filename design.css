@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Italiana&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Playfair Display", serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: #bbc6fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: white;
+  min-height: 40vh;
+  width: 40vw;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 6px;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.line {
+  height: 2px;
+  width: 60%;
+  background-color: rgb(19, 129, 181);
+  margin-left: 22%;
+  margin-bottom: 16px;
+}
+
+.content {
+  font-size: 18px;
+  min-height: 80px;
+  padding: 18px;
+}
+
+.content::before {
+  content: '"';
+}
+.content::after {
+  content: '"';
+}
+
+.author {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  height: 50px;
+  width: 100%;
+}
+
+.quote,
+.tweet {
+  background: rgb(23, 124, 229);
+  color: #fff;
+  padding: 2px;
+  margin: 2px;
+  border: none;
+  border-radius: 20px;
+  width: 35%;
+  height: 40px;
+  cursor: pointer;
+}
+
+.tweet img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.tweet {
+  background-color: white;
+  border: 2px solid cyan;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
